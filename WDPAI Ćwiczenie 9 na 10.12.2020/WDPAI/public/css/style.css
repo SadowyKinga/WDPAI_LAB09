@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #0345FC 0%, #0345FC 11%, #0606E1 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    text-align: center;
+}
+
+.login-container {
+    width: 50%;
+}
+
+
+/* ulozenie formularza (login i haslo) jeden pod drugim */
+form.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 40vh;
+
+    /*okienko loginu i hasla - duze szare*/
+    background: #FFFFFFE0 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 33px;
+}
+
+/*przycisk "LOGIN'*/
+button {
+    background: transparent linear-gradient(180deg, #0345FC 0%, #0606E1 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 19px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin: 1em; /*margines na 12 pikseli*/
+    line-height: 2.5em;
+}
+
+/*napisy i male okienka w ktorych sa odpowiednio napisy login i haslo*/
+input, textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+}
+
+/*przerabiamy aplikacje na mobilna- telefon o wymiarach 420 pikseli*/
+@media only screen and (max-device-width: 420px) {
+    .container {
+        flex-direction: column; /*nadpisujemy powyzsza aplikacje na kolumny - wczesniej yly wiersze*/
+    }
+    * {
+        font-size: 36px; /*wielkosc czcionki dla calego dokumentu html*/
+    }
+    .login-container,
+    .logo {
+        width: 100%; /*zwiekszamy szerokosc - zakres*/
+    }
+    form {
+        margin: auto; /*przesuwamy na srodek okno logowania - duze szare*/
+    }
+    img {
+        height: 7em; /*zmieniamy rozmiar dla logo naszej firmy*/
+        margin: 2em;
+    }
+}
+
+.base-container {
+    display: flex; /*układ elementów wierszowy bądz kolumnowy*/
+    align-items: center;  /*wyrównanie elemntów*/
+    justify-content: flex-start; /*justowanie*/
+    height: 100vh; /*wysokosc*/
+}
+
+nav { /*nawigacja z projects - lewa strona apki*/
+    width: 20vw;
+    height: 100%;
+    background: transparent linear-gradient(180deg, #050DE4 0%, #030772 100%) 0% 0% no-repeat padding-box;/*kolor*/
+}
+
+main { /*main z projects - prawa strona apki*/
+    width: 80vw;
+}
+
+nav {
+    display: flex; /*pozycjonowanie kolumnowe*/
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav>img { /*odwolanie do loginu w nawigacji*/
+    width: 60%;
+    margin: 2em auto;/*marginesy*/
+}
+
+a {
+    text-decoration: none; /*wyłączamy efekt podwietlenia linków*/
+    display: inline-block; /*zmieniamy domyslne polozenie bloku*/
+    line-height: 2em;
+}
+
+li i { /*odwolanie do ikonek z project.html*/
+    font-size: 1.5em;
+}
+
+.button{ /*dodajemy biale obramowanie do przycisku do nawigacji*/
+    border: 1px solid white;
+    border-radius: 1em;
+    margin-left: 1em;
+    text-align: center; /*wyrównanie tekstu*/
+    letter-spacing: 0.72px; /*odstęp pomiędzy tekstami*/
+    color: white;
+    padding: 0.2rem; /*marginesy wewnętrzne*/
+    width: 60%; /*szerokosć przycisku*/
+}
+
+
+ul{ /*stylowanie listy po lewej stronie*/
+    list-style-type: none;
+    font: normal normal normal 20px/27px Segoe UI;/*czcionka z Adobe xd*/
+    letter-spacing: 0.72px;
+    color: white;
+    height: 100%;
+    width: calc(100% - 40px);
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li{ /*stylowanie punkcikow, calej listy*/
+    text-align: left; /*wyrównanie przycisków do lewej strony*/
+    color: white;
+    margin-bottom:  1em; /*margines dolny*/
+
+}
+
+/*przeniesienie przycisku settings na dół strony*/
+li:last-child{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main { /*modyfikacja okna po prawej stronie - main*/
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/*pasek wyszukiwania*/
+header{
+    display: flex;
+    justify-content: space-between; /*wyrównanie paska wyszukiwania do lewej i prawej strony*/
+    padding: 1em 2em;
+    border-bottom: 1px solid gray;
+
+}
+
+.add-project{ /*przycisk add project*/
+    background: #03099C 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 1.5em;
+    color: white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 20%;
+}
+
+.add-project>i {/*ikonka w przycisku add project - odwolanie i ustawienie jej*/
+    padding: 1em 1em;
+    background: #03099C 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+.search-bar{
+    width: 70%;
+}
+
+.search-bar>form>input{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: grey;
+    margin: 0;
+    box-sizing: border-box;
+}
+
